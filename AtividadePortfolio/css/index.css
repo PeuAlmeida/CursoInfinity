@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --black: #333;
+    --black2: #333;
+    --white: #fff;
+    --white2: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navegacao {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgb(60, 60, 60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navegacao ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.navegacao ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navegacao ul li a {
+
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    white-space: normal;
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.navegacao ul li a:hover{
+    color: var(--white);
+    opacity: 1;
+    font-size: 18px;
+    transform: translateY(-3px);
+}
+
+.principal{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    background: var(--black);
+    min-height: 100vh;
+}
+
+.principal .barraTopo {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 300px);
+    left: 300px;
+    background: rgb(60, 60, 60);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.principal .barraTopo .logo {
+    text-decoration: none;
+    position: relative;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    width: 100%;
+    color: var(--white);
+    opacity: 0.5;
+    animation: animacao 5s linear infinite;
+}
+
+@keyframes animacao {
+    
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+        color: var(--white);
+        text-shadow: none;
+        opacity: 0.5;
+    }
+    
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{
+        color: var(--white);
+        opacity: 1;
+        text-shadow: 0 0 10px var(--white),
+                    0 0 20px var(--white),
+                    0 0 40px var(--white),
+                    0 0 80px var(--white),
+                    0 0 160px var(--white);
+    }
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.banner .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .imgBx {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.banner .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h3 {
+    position: relative;
+    font-size: 1.4em;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 10px;
+    color: var(--white);
+}
+
+.btnContainer {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btnContainer .btn {
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 10px;
+    color: var(--white);
+    background: rgb(78, 78, 78);
+
+}
+
+.btnContainer .btn:hover {
+    opacity: 1;
+    color: var(--black);
+    background: var(--white);
+    box-shadow: 0 0 10px var(--white), 0 0 20px var(--white),  0 0 10px var(--white);
+}
+
+.redesSociais {
+
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+}
+
+.redesSociais li {
+
+    list-style: none;
+}
+
+.redesSociais li .redesSociaisBtn{
+ 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(f, f, f, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.2em;
+    margin: 10px;
+}
+.redesSociais li .redesSociaisBtn:hover {
+    background: var(--white2);
+    color: var(--black2);
+}
