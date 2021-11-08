@@ -1,11 +1,10 @@
 header {
     height: 45em;
     position: relative;
-    background: url(https://steamuserimages-a.akamaihd.net/ugc/1695024823120015526/A7F04F93EA4353BB31C494814C029D53145B1C0C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false) no-repeat center;
-    background-size: cover;
-    position: relative;
     margin-bottom: 4em;
     z-index: 0;
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/1695024823120015526/A7F04F93EA4353BB31C494814C029D53145B1C0C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false) no-repeat center;
+    background-size: cover;
 }
 
 header::before {
